@@ -19,16 +19,34 @@ For run this project you must have [Node.js](https://nodejs.org/en/) installed a
 
 Now clone this project and then follow the commands below to run it.
 
+1. Move into project folder
+
 ```
 cd spa-store-parts
+```
+
+2 . Install dependences
+
+```
 yarn
 ```
 
 or
 
 ```
-cd spa-store-parts
 npm install
+```
+
+3. Run app
+
+```
+yarn start
+```
+
+or
+
+```
+npm run start
 ```
 
 After that, you must have the project running at
