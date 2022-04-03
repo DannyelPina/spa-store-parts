@@ -25,7 +25,7 @@ Now clone this project and then follow the commands below to run it.
 cd spa-store-parts
 ```
 
-2 . Install dependences
+2. Install dependences
 
 ```
 yarn
