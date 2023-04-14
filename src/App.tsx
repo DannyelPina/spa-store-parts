@@ -6,11 +6,12 @@ import { Router } from "./routes";
 
 export function App() {
 	return (
-		<PartsProvider>
-			<BrowserRouter>
-				<Router />
-			</BrowserRouter>
-			<GlobalStyle />
-		</PartsProvider>
+		<div>Widget: Hello world</div>
+		// <PartsProvider>
+		// 	<BrowserRouter>
+		// 		<Router />
+		// 	</BrowserRouter>
+		// 	<GlobalStyle />
+		// </PartsProvider>
 	);
 }
