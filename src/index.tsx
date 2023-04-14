@@ -23,7 +23,11 @@ const app = {
         return {
           render: () => {
             ReactDOM.render(
-				<App />, 
+              <>
+                <div style={{backgroundColor: 'red', color: 'white'}}>init.stats</div>
+                <App />
+              </>
+				, 
 				document.querySelector(init.selector)
 			);
           },
