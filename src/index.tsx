@@ -24,7 +24,7 @@ const app = {
           render: () => {
             ReactDOM.render(
               <>
-                <div style={{backgroundColor: 'red', color: 'white'}}>init.stats</div>
+                <div style={{backgroundColor: 'red', color: 'white', height: 50, width: '100%'}}>init.stats</div>
                 <App />
               </>
 				, 
