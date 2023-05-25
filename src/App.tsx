@@ -10,15 +10,20 @@ export type TeamOrPlayerProps = {
 	widgetToBeRendered?: "Teams" | "Player";
 };
 
-export function App() {
+type AppProps = {
+	widget: "stats" | "head-to-head";
+  	entity: "teams" | "player";
+}
+
+export function App({widget, entity} : AppProps) {
 	return (
 		<FiltersProvider>
 			<div className="bg-white">
 				<div className="lg:container mx-auto lg:px-4 py-4">
 					<MemoizedCompetition />
 
-					<MemoizedTeamOrPlayerStats widgetToBeRendered = "Player" />
-					<MemoizedHeadToHead widgetToBeRendered = "Player" />
+					{widget === "stats" ? <MemoizedTeamOrPlayerStats widgetToBeRendered = {entity === "player" ? "Player" : "Teams"} /> : <MemoizedHeadToHead widgetToBeRendered = {entity === "player" ? "Player" : "Teams"} />}					
+					
 				</div>
 			</div>
 		</FiltersProvider>
