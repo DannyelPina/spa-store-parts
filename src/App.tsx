@@ -1,16 +1,32 @@
-import { BrowserRouter } from "react-router-dom";
+import './i18n/config';
 
-import { GlobalStyle } from "./styles/global";
-import { PartsProvider } from "./Hooks";
-import { Router } from "./routes";
+import { FiltersProvider } from "./Hooks/useFilters";
+import { MemoizedCompetition } from "./components/Competition";
+import { MemoizedHeadToHead } from "./components/HeadToHead";
+import { MemoizedTeamOrPlayerStats } from "./components/TeamOrPlayerStats";
+import "./styles/index.css";
+
+export type TeamOrPlayerProps = {
+	widgetToBeRendered?: "Teams" | "Player";
+};
 
 export function App() {
 	return (
-		<PartsProvider>
-			<BrowserRouter>
-				<Router />
-			</BrowserRouter>
-			<GlobalStyle />
-		</PartsProvider>
+		<FiltersProvider>
+			<div className="bg-white">
+				<div className="lg:container mx-auto lg:px-4 py-4">
+					<MemoizedCompetition />
+
+					<MemoizedTeamOrPlayerStats widgetToBeRendered = "Player" />
+					<MemoizedHeadToHead widgetToBeRendered = "Player" />
+				</div>
+			</div>
+		</FiltersProvider>
 	);
 }
+
+// export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+// 	props: {
+// 		...(await serverSideTranslations(locale ?? "en", ["common"])),
+// 	},
+// });

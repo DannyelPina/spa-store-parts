@@ -1,43 +1,31 @@
-import React from "react";
 import ReactDOM from "react-dom";
 
+import React from "react";
 import { App } from "./App";
 
-// ReactDOM.render(
-// 	<React.StrictMode>
-// 		<App />
-// 	</React.StrictMode>,
-// 	document.getElementById("root")
-// );
+// import "./i18n";
+
+ReactDOM.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
+	document.getElementById("root")
+);
 
 
-let init: any = null;
+// type Props = {
+//   widget: "stats" | "head-to-head";
+//   entity: "teams" | "player";
+//   selector: any;
+// }
 
-const app = {
-  config: (config: any) =>{
-      init = config;
-  },
-  widgets: {
-    myWidget: {
-      new: () => {
-        return {
-          render: () => {
-            ReactDOM.render(
-              <>
-                <div style={{backgroundColor: 'red', color: 'white', height: 50, width: '100%'}}>init.stats</div>
-                <App />
-              </>
-				, 
-				document.querySelector(init.selector)
-			);
-          },
-          unmount(){
-            ReactDOM.unmountComponentAtNode(document.querySelector(init.selector)); 
-          },
-        }
-      }
-    }
-  }
-}
+// const app = {
+//   render: ({selector, entity, widget}: Props) => {
+//     ReactDOM.render(<App />, document.querySelector(selector));
+//   },
+//   unmount: (selector: any) => {
+//     ReactDOM.unmountComponentAtNode(document.querySelector(selector)); 
+//   }
+// }
 
-export default app;
+// export default app;
