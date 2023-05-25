@@ -18,13 +18,42 @@ type Props = {
   selector: any;
 }
 
+let init: any = null;
+
 const app = {
-  render: ({selector, entity, widget}: Props) => {
-    ReactDOM.render(<App widget={widget} entity={entity} />, document.querySelector(selector));
+  config: (config: any) =>{
+      init = config;
   },
-  unmount: (selector: any) => {
-    ReactDOM.unmountComponentAtNode(document.querySelector(selector)); 
+  widgets: {
+    myWidget: {
+      new: () => {
+        return {
+          render: () => {
+            ReactDOM.render(
+              <>
+                <div style={{backgroundColor: 'red', color: 'white', height: 50, width: '100%'}}>init.stats</div>
+                <App widget={init.widget} entity={init.entity} />
+              </>
+				, 
+				document.querySelector(init.selector)
+			);
+          },
+          unmount(){
+            ReactDOM.unmountComponentAtNode(document.querySelector(init.selector)); 
+          },
+        }
+      }
+    }
   }
 }
+
+// const app = {
+//   render: ({selector, entity, widget}: Props) => {
+//     ReactDOM.render(<App widget={widget} entity={entity} />, document.querySelector(selector));
+//   },
+//   unmount: (selector: any) => {
+//     ReactDOM.unmountComponentAtNode(document.querySelector(selector)); 
+//   }
+// }
 
 export default app;
