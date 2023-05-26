@@ -47,7 +47,7 @@ export function TeamOrPlayerInfo({teamPlayer, handleClickRemoveTeamOrPlayer, wid
 						/>
 					</picture>
 					<div>
-						<p title={teamPlayer.name} className="break-all text-[14px] lg:text-[16px] font-[700] flex justify-csenter">{teamPlayer.name}</p>
+						<p title={teamPlayer.name} className="break-all text-[14px] lg:text-[16px] font-[700] flex justify-center">{teamPlayer.name}</p>
 						<p className="leading-6 text-[10px] lg:text-[12px] font-[500] flex justify-center"
 							onClick={() => handleClickRemoveTeamOrPlayer(teamPlayer.id)}>
 							{t('clickTo')}&nbsp;
@@ -58,10 +58,10 @@ export function TeamOrPlayerInfo({teamPlayer, handleClickRemoveTeamOrPlayer, wid
 					</div>
 				</>
 			) : (
-				<div className="relative h-[110px] w-[110px] lg:h-[147px] lg:w-[147px] border-2 border-[#D8D8D8] rounded-full cursor-default select-none">
-					<div className="absolute left-[50%] -translate-x-[50%] top-[46%] -translate-y-[54%] text-[100px] text-[#D8B97D]">
-						+
-					</div>
+				<div className="flex justify-center items-center h-[110px] w-[110px] lg:h-[147px] lg:w-[147px] border-2 border-[#D8D8D8] rounded-full cursor-default select-none">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 11.7V18.24H11.34V30H18.06V18.24H29.46V11.7H18.06V0H11.34V11.7H0Z" fill="#D8B97D"/>
+					</svg>
 				</div>
 			)}
 		</div>
