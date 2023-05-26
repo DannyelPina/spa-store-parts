@@ -129,9 +129,11 @@ function TeamOrPlayerStats({widgetToBeRendered}: TeamOrPlayerProps) {
 			
 						
 
-			<div onClick={handleShowMoreFilters} className={`fixed flex items-end bottom-0 left-0 right-0 z-40 w-full bg-black/75 transition-all transform duration-300 ease-in-out h-full ${showMoreFilters ? "translate-y-0" : "translate-y-full"}`}>
+			<div className={`fixed flex items-end bottom-0 left-0 right-0 z-40 w-full transition-all transform duration-300 ease-in-out h-full ${showMoreFilters ? "translate-y-0" : "translate-y-full"}`}>
+				
+				<div onClick={handleShowMoreFilters} className="bg-black/75 z-0 absolute h-full w-full"></div>
 
-				<div className="bg-[#F6F6F6] p-4 w-full flex flex-col gap-4">
+				<div className="bg-[#F6F6F6] p-4 w-full flex flex-col gap-4 z-10">
 
 					<div className="flex flex-row justify-between">
 						<span className="text-[#242529] text-lg font-bold">Apply filters</span>
