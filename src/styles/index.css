@@ -33,6 +33,11 @@
   
   select {
     outline: none;
+    border: unset;
+  }
+
+  select:focus {
+    box-shadow: none;
   }
   
   select > option {
