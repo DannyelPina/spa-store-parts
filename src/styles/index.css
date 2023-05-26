@@ -31,19 +31,3 @@
       rgb(var(--background-start-rgb));
   }
   
-  select {
-    outline: none;
-    border: unset;
-  }
-
-  select:focus {
-    box-shadow: none;
-  }
-  
-  select > option {
-    padding: 16px;
-  }
-  
-  .swiper-pagination-bullet-active{
-    background-color:#D8B97D !important
-  }

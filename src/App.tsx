@@ -1,5 +1,5 @@
 import './i18n/config';
-// import "./styles/index.css";
+import "./styles/custom.css";
 import './tailwindcss.js';
 
 import { FiltersProvider } from "./Hooks/useFilters";
