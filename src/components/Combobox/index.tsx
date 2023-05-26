@@ -43,7 +43,7 @@ function Combobox({ defaultMarginX, endpoint, identifier, shouldRequestData }: P
 			
 			<select
 				aria-label={identifier}
-				className="w-full py-2" 
+				className="w-full py-2 border-0 outline outline-none focus:outline-none" 
 				onChange={(e) => handleSetSelectedItem(e.target.value, identifier)} 
 				value={defaultValue[identifier]}
 			>
