@@ -1,13 +1,13 @@
-select {
-    outline: none;
-    border: unset;
+.widget-concacaf-select {
+    outline: none !important;
+    border: unset !important;
 }
 
-select:focus {
-    box-shadow: none;
+.widget-concacaf-select:focus {
+    box-shadow: none !important;
 }
 
-select > option {
+.widget-concacaf-select > option {
     padding: 16px;
 }
 
