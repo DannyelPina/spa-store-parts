@@ -3,13 +3,16 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"autoprefixer": "^10.4.14",
 		"i18next": "^22.5.0",
 		"i18next-http-backend": "^2.2.1",
+		"postcss-loader": "^7.3.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-i18next": "^12.3.1",
 		"react-router-dom": "^6.3.0",
 		"react-scripts": "5.0.0",
+		"style-loader": "^3.3.3",
 		"swiper": "^9.3.2",
 		"swr": "^2.1.5",
 		"web-vitals": "^2.1.0"

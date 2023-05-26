@@ -15,10 +15,23 @@ module.exports = {
         rules: [
             {
                 // Extract and Transpile ES6+ in to ES5 
-                test: /\.(ts|tsx)$/,
+                test: /\.(js|jsx|ts|tsx)$/,
                 exclude: /node_modules/,
                 use: ['ts-loader']
             },
+            // {
+            //     test: /\.css$/i,
+            //     include: path.resolve(__dirname, '../src/styles'),
+            //     use: ['style-loader', 'css-loader', {
+            //         loader: "postcss-loader",
+            //         options: {
+            //           plugins: () => [
+            //             require("autoprefixer")()
+            //           ],
+            //         },
+            //       }
+            //     ],
+            // },
             {
                 // Extract CSS files
                 test: /\.css$/,

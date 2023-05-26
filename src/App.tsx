@@ -1,10 +1,11 @@
 import './i18n/config';
+// import "./styles/index.css";
+import './tailwindcss.js';
 
 import { FiltersProvider } from "./Hooks/useFilters";
 import { MemoizedCompetition } from "./components/Competition";
 import { MemoizedHeadToHead } from "./components/HeadToHead";
 import { MemoizedTeamOrPlayerStats } from "./components/TeamOrPlayerStats";
-import "./styles/index.css";
 
 export type TeamOrPlayerProps = {
 	widgetToBeRendered?: "Teams" | "Player";
