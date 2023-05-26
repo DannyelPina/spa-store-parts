@@ -4,7 +4,9 @@
 }
 
 .widget-concacaf-select:focus {
-    box-shadow: none !important;
+    box-shadow: transparent !important;
+    outline: none !important;
+    border: unset !important;
 }
 
 .widget-concacaf-select > option {
