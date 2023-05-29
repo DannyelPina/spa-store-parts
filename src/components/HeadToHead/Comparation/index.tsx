@@ -40,7 +40,7 @@ export function TeamOrPlayerInfo({teamPlayer, handleClickRemoveTeamOrPlayer, wid
 				<>
 					<picture>
 						<img
-							className="h-[110px] lg:h-[147px] object-cover object-center rounded-full border-2 p-6 border-[#D8B97D]"
+							className="h-[110px] w-[110px] lg:h-[147px] lg:w-[147px] object-cover object-center rounded-full border-2 p-6 border-[#D8B97D]"
 							src={teamPlayer.image}
 							alt="team or player"
 							title={teamPlayer.name}
