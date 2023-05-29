@@ -1,6 +1,6 @@
 
-const BASE_URL = "https://af-concacaf-dataplatform.azurewebsites.net";
-export const API_KEY = "vox6znVi9ZOkcliMu_aA1IfjzgyTrh0lNWltnM1gdX2BAzFuLZmIWg==";
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+export const API_KEY = process.env.REACT_APP_API_KEY;
 export const ENDPOINT = {
     TEAM_STATS: "api/TeamStatsFunction",
     PLAYER_STATS: "api/PlayerStatsFunction",
@@ -25,8 +25,8 @@ export const SWRThirdParams = {
     refreshWhenHidden: false,
 }
 
-export const fetcher = async (url: string, key: string) => {
-    const options = {
+export const fetcher = async (url: string | undefined, key: string | undefined) => {
+    const options: any = {
         method: "GET",
         headers: {
             accept: "application/json",

@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import loader from "../../assets/img/loader.gif";
 type LoadingProps = {
 	width?: number;
 	height?: number;
@@ -16,7 +15,7 @@ export function Loading({ width, height, isText }: LoadingProps) {
 	return (
 		<div className="flex justify-center items-center">
 			<img
-				src={loader}
+				src={process.env.REACT_APP_LOADER}
 				alt="loading"
 				width={width || 45}
 				height={height || 45}

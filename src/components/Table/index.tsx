@@ -6,7 +6,6 @@ import { ReactElement, memo } from "react";
 
 import { TeamOrPlayerProps } from "../../App";
 import { useFilters } from "../../Hooks/useFilters";
-import TopPlayerBackground from "../../assets/img/TopPlayerBackground.png";
 import { Alert } from "../Alert";
 
 export type TableColumnProps = {
@@ -60,7 +59,7 @@ function Table({ columns, data, widgetToBeRendered }: TableProps) {
 								return(	
 									<tr key={row.id} className="border-t h-12">
 										<td colSpan={3} className="h-full w-full rounded-md lg:hidden">
-											<div className="w-full flex flex-row justify-between items-end p-4 pb-0 bg-center bg-no-repeat bg-cover rounded-md" style={{ backgroundImage: `url(${TopPlayerBackground})` }}>
+											<div className="w-full flex flex-row justify-between items-end p-4 pb-0 bg-center bg-no-repeat bg-cover rounded-md" style={{ backgroundImage: `url(${process.env.REACT_APP_TOP_PLAYER_BACKGROUND})` }}>
 												<div className="flex flex-col text-white flex-1">
 													<span className="text-base font-normal">
 														{row.rank}
