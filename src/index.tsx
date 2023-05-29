@@ -1,22 +1,5 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
-
-// import "./i18n";
-
-ReactDOM.render(
-	<React.StrictMode>
-		<App widget="stats" entity="player" />
-	</React.StrictMode>,
-	document.getElementById("root")
-);
-
-
-type Props = {
-  widget: "stats" | "head-to-head";
-  entity: "teams" | "player";
-  selector: any;
-}
 
 let init: any = null;
 
