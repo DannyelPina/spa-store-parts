@@ -1,6 +1,6 @@
+import './globalStyle.js';
 import './i18n/config';
 import "./styles/custom.css";
-import './tailwindcss.js';
 
 import { FiltersProvider } from "./Hooks/useFilters";
 import { MemoizedCompetition } from "./components/Competition";
