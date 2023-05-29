@@ -70,11 +70,13 @@ function Competition() {
 			{response?.data?.map((item: any, index: number) => (
 				<SwiperSlide key={item.id}>
 					{({ isActive }) => (
-						<div 
-							onClick={() => changeCompetition(item.id, index) }
-							className={`w-24 h-24 bg-center bg-no-repeat bg-cover cursor-pointer mb-[40px] ${!isActive ? "grayscale" : ""}`}
-							style={{backgroundImage: `url(${item.image})`,}}
-						></div>
+
+						<picture>
+							<img onClick={() => changeCompetition(item.id, index) } className={`w-24 h-24 bg-center bg-no-repeat bg-cover cursor-pointer mb-[40px] ${!isActive ? "grayscale" : ""}`}
+								src={item.image} title={item.name} alt={t("image") ?? "image"}
+							/>
+						</picture>
+
 					)}
 				</SwiperSlide>
 			))}

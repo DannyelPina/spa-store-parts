@@ -39,10 +39,20 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'images',
-                },
+                // loader: 'file-loader',
+                // options: {
+                //     outputPath: 'images',
+                // },
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'images/',
+                            publicPath: 'images/',
+                        },
+                    },
+                ],
             },
         ]
     },

@@ -1,9 +1,16 @@
 .widget-concacaf-select {
     outline: none !important;
     border: unset !important;
+    box-shadow: transparent !important;
 }
 
 .widget-concacaf-select:focus {
+    box-shadow: transparent !important;
+    outline: none !important;
+    border: unset !important;
+}
+
+.widget-concacaf-select:active {
     box-shadow: transparent !important;
     outline: none !important;
     border: unset !important;
