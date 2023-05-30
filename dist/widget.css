@@ -23,6 +23,10 @@
 .swiper-pagination-bullet-active{
     background-color:#D8B97D !important
 }
+
+.control-image {
+    background-blend-mode: difference;
+}
 /**
  * Swiper 9.3.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
