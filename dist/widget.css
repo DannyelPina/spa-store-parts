@@ -2305,23 +2305,6 @@ video {
          text-size-adjust: 100%;
   }
   
-  body {
-    color: rgb(0, 0, 0);
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(255, 255, 255)
-      )
-      rgb(214, 219, 220);
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-  }
-  
   @media (min-width: 1024px) {
 
   .lg\:container {
