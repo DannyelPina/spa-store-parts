@@ -38,6 +38,25 @@
     src: local('CircularStd_MediumItalic'), url(/55bf23ce572de9d28b4e.otf) format('opentype');
 }
 
+.vs-comparison {
+    font-family: 'CircularStd_Book' !important;
+}
+
+.widget-button {
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+.widget-button:hover,.widget-button:focus,.widget-button:active, 
+.widget-button:active:focus:not(:disabled):not(.disabled) {
+    box-shadow: none !important;
+}
+
+.widget-button:hover,.widget-button:focus,.widget-button:active, 
+.widget-button:active:focus:not(:disabled):not(.disabled) {
+    outline: 0;
+}
+
 .widget-concacaf-select {
     outline: none !important;
     border: medium none currentColor !important;
@@ -104,6 +123,7 @@
 
 .widget-body {
     font-family: 'CircularStd_Book' !important;
+    color: #242529 !important;
 }
 
 .widget-stats-title {
